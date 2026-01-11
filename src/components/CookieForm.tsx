@@ -149,14 +149,14 @@ export default function CookieForm() {
           />
           <SelectionCard
             title="Block"
-            price="~74 Bales"
+            price="74 Bales"
             selected={unitType === 'block'}
             onClick={() => { setValue('type', 'block'); }}
             className="h-32"
           />
           <SelectionCard
             title="Truck"
-            price="~500 Bales"
+            price="500 Bales"
             selected={unitType === 'truck'}
             onClick={() => { setValue('type', 'truck'); }}
             className="h-32"

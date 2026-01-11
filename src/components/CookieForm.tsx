@@ -119,6 +119,8 @@ export default function CookieForm() {
             inventoryCount={inventoryMap['alfalfa'] || "..."}
             selected={selectedProduct === 'alfalfa'}
             onClick={() => setValue('product', 'alfalfa')}
+            imageUrl="/images/alfalfa.png"
+            className="h-48 md:h-56"
           />
           <SelectionCard
             title="Wheat Hay"
@@ -126,9 +128,10 @@ export default function CookieForm() {
             inventoryCount={inventoryMap['wheat'] || "..."}
             selected={selectedProduct === 'wheat'}
             onClick={() => setValue('product', 'wheat')}
+            imageUrl="/images/wheat.png"
+            className="h-48 md:h-56"
           />
         </div>
-        {/* Removed 'Looking for something else' link */}
       </section>
 
       {/* SECTION 2: QUANTITY & UNIT */}

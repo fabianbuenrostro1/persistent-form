@@ -2,9 +2,14 @@ import CookieForm from "@/components/CookieForm";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-100 p-4 md:p-8">
-      {/* Background decoration */}
-      <div className="fixed inset-0 z-0 pointer-events-none opacity-40 mix-blend-multiply bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-200 via-gray-100 to-gray-100"></div>
+    <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 relative">
+      {/* Background image */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/bg-hay-field.png')" }}
+      ></div>
+      {/* White overlay for subtle premium effect */}
+      <div className="fixed inset-0 z-0 bg-white/70"></div>
 
       <main className="relative z-10 w-full max-w-2xl">
         <div className="text-center mb-8 space-y-4">

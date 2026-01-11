@@ -328,7 +328,7 @@ export default function CookieForm() {
       {/* SECTION 1: PRODUCT SELECTION */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gray-900">What are you looking for?</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <SelectionCard
             title="Alfalfa"
             price="$14 / bale"
@@ -355,7 +355,7 @@ export default function CookieForm() {
         <h3 className="text-2xl font-bold text-gray-900">How much do you need?</h3>
 
         {/* 3-Card Quantity/Unit Selection */}
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <SelectionCard
             title="Bales"
             price="Single / bale"
@@ -401,7 +401,7 @@ export default function CookieForm() {
         <h3 className="text-2xl font-bold text-gray-900">How should we get it to you?</h3>
 
         <div className="relative">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div
               onClick={() => setValue('delivery', 'pickup')}
               className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${deliveryMethod === 'pickup' ? 'border-[#d4a34c] bg-[#fdfdfc] shadow-md scale-[1.01]' : 'border-gray-200 hover:border-gray-300'}`}
@@ -419,8 +419,8 @@ export default function CookieForm() {
             </div>
           </div>
 
-          {/* OR Separator */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full border border-[#d4a34c] bg-white text-xs font-bold text-[#d4a34c] shadow-sm z-10">
+          {/* OR Separator - hidden on mobile when stacked */}
+          <div className="hidden sm:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 items-center justify-center rounded-full border border-[#d4a34c] bg-white text-xs font-bold text-[#d4a34c] shadow-sm z-10">
             OR
           </div>
         </div>
@@ -491,7 +491,7 @@ export default function CookieForm() {
         <h3 className="text-2xl font-bold text-gray-900">Contact Details</h3>
 
         {/* Name Split */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <AirbnbInput
             label="First Name"
             placeholder="Jane"
@@ -507,7 +507,7 @@ export default function CookieForm() {
         </div>
 
         {/* Phone & Email */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <AirbnbInput
             label="Phone Number"
             type="tel"

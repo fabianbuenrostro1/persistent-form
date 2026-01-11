@@ -15,7 +15,7 @@ export default function Home() {
         <div className="text-center mb-8 space-y-4">
           {/* Logo */}
           <div className="flex justify-center mb-2">
-            <img src="/logo.png" alt="Grower Direct" className="h-48 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300" />
+            <img src="/logo.png" alt="Grower Direct" className="h-32 sm:h-40 md:h-48 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
 

@@ -167,19 +167,9 @@ export default function CookieForm() {
         {/* Counter Component for Quantity */}
         <div className="bg-gray-50/50 p-4 md:p-6 rounded-2xl border border-gray-200/60 shadow-sm animate-fade-in flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
-            <p className="text-base font-bold text-gray-900 uppercase tracking-wide">
-              {unitType === 'block' ? "Blocks" : unitType === 'truck' ? "Truckloads" : "Bales"}
+            <p className="text-xl font-bold text-gray-900">
+              {unitType === 'block' ? "Block" : unitType === 'truck' ? "Truckloads" : "Bales"}
             </p>
-            {unitType === 'block' ? (
-              <div className="flex items-center justify-center md:justify-start gap-2 mt-1.5 text-sm">
-                <span className="font-medium text-gray-500 bg-white border border-gray-200 px-2 py-0.5 rounded-md shadow-sm">4' x 4' x 8'</span>
-                <span className="font-medium text-green-700">≈ 74 Bales</span>
-              </div>
-            ) : unitType === 'truck' ? (
-              <p className="text-sm text-gray-500 mt-1 font-medium">~500 Bales per load</p>
-            ) : (
-              <p className="text-sm text-gray-400 mt-1 font-medium">Standard unit</p>
-            )}
           </div>
           <Counter
             value={quantity}

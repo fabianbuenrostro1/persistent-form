@@ -83,9 +83,15 @@ export default function SelectionCard({
                 <div className="flex items-end justify-end mt-2">
                     {price && (
                         <div className="text-right">
-                            <span className={`block font-bold text-lg md:text-xl ${selected ? "text-[#1e3a1e]" : "text-gray-900"}`}>
-                                {price.split('/')[0]} <span className="text-xs md:text-sm font-normal text-gray-500">/ bale</span>
-                            </span>
+                            {(() => {
+                                const [main, suffix] = price.split('/');
+                                return (
+                                    <span className={`block font-bold text-lg md:text-xl ${selected ? "text-[#1e3a1e]" : "text-gray-900"}`}>
+                                        {main.trim()}
+                                        {suffix && <span className="text-xs md:text-sm font-normal text-gray-500"> / {suffix.trim()}</span>}
+                                    </span>
+                                );
+                            })()}
                         </div>
                     )}
                 </div>

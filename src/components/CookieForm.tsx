@@ -142,7 +142,7 @@ export default function CookieForm() {
         <div className="grid grid-cols-3 gap-3">
           <SelectionCard
             title="Bales"
-            price="Single"
+            price="Single / bale"
             selected={unitType === 'bale'}
             onClick={() => { setValue('type', 'bale'); }}
             className="h-32"

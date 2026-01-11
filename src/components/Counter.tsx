@@ -24,7 +24,7 @@ export default function Counter({
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full md:w-auto">
             {label && (
                 <label className="mb-2 text-sm font-bold text-gray-500 uppercase tracking-wide">
                     {label}

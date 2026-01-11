@@ -37,12 +37,13 @@ export async function POST(req: Request) {
                 data.productSubtotal || 0,
                 data.deliveryFee || 0,
                 data.estimatedTotal || 0,
-                data.feedback
+                data.feedback,
+                data.balesEquivalent || 0,  // Column O: Bales Equivalent
             ];
 
             await sheets.spreadsheets.values.append({
                 spreadsheetId: process.env.GOOGLE_SHEET_ID,
-                range: 'Submissions!A:N', // Updated range for more columns
+                range: 'Submissions!A:O', // Updated range for balesEquivalent
                 valueInputOption: 'USER_ENTERED',
                 requestBody: { values: [row] },
             });

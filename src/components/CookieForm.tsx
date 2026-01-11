@@ -192,6 +192,7 @@ export default function CookieForm() {
           deliveryFee,
           productSubtotal: subtotal,
           estimatedTotal: grandTotal,
+          balesEquivalent: getTotalBales(),  // Normalized bale count
         }),
       });
 

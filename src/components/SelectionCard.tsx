@@ -29,7 +29,7 @@ export default function SelectionCard({
         rounded-2xl border transition-all duration-300 ease-out
         ${className}
         ${selected
-                    ? "border-[#1e3a1e] shadow-xl scale-[1.02] bg-white ring-1 ring-[#1e3a1e]/10"
+                    ? "border-[#d4a34c] shadow-xl scale-[1.02] bg-white ring-1 ring-[#d4a34c]/50"
                     : "border-gray-100 bg-white shadow-md hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
                 }
       `}

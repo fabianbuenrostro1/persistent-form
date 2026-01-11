@@ -9,15 +9,9 @@ export default function Home() {
       <main className="relative z-10 w-full max-w-2xl">
         <div className="text-center mb-8 space-y-4">
           {/* Logo */}
-          <div className="flex justify-center mb-6">
-            <img src="/logo.png" alt="Grower Direct Logo" className="h-32 w-auto drop-shadow-lg" />
+          <div className="flex justify-center mb-2">
+            <img src="/logo.png" alt="Grower Direct" className="h-48 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-            Order Form
-          </h1>
-          <p className="text-gray-500 font-medium text-lg">
-            Secure your hay today.
-          </p>
         </div>
 
         <div className="bg-white/80 rounded-[2.5rem] shadow-2xl p-1 sm:p-2 border border-white/40 backdrop-blur-xl">

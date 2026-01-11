@@ -3,7 +3,20 @@ import { google } from 'googleapis';
 
 export async function GET() {
   try {
-    const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLE_API_KEY });
+    // Use Service Account authentication (same as submit route)
+    if (!process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
+      console.warn("No Service Account Key found. Returning fallback inventory.");
+      return NextResponse.json({
+        inventory: { wheat: '100', alfalfa: '50' }
+      });
+    }
+
+    const auth = new google.auth.GoogleAuth({
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY),
+      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
+    });
+
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Read range A2:B from 'Inventory' tab
     const response = await sheets.spreadsheets.values.get({
